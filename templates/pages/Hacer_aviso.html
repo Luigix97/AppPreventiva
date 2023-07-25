@@ -1,0 +1,18 @@
+{% extends "appWeb.html" %}
+{% load static %}
+{% block title %} Hacer aviso {% endblock %}
+
+{% block style %} 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/avisos.css' %}" />
+{% endblock %}
+
+{% block content %}
+    <h1> Nuevo aviso </h1>
+
+    <form method = "POST">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Publicar</button>
+    </form>
+
+{% endblock %}

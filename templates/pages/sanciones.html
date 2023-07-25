@@ -1,0 +1,65 @@
+{% extends "appWeb.html" %}
+
+{% load static %}
+<!DOCTYPE html>
+
+<title>{% block title %} Sanciones {% endblock %} </title>
+
+{% block style %}
+   
+    <link rel="stylesheet" type="text/css" href="{% static 'css/sanciones.css' %}"/> 
+
+{% endblock %}
+
+
+{% block content %}
+
+<body>
+
+    <h1 style ="text-align: center;"><b>Sanciones por incumplimiento de los lineamientos</b></h1>
+
+    <p style = "text-align: justify;">
+        Actualmente estamos pasando por una etapa muy difícil combatiendo
+        contra el virus conocido como el COVID-19, el cual ha afectando a
+        muchas familias en todo el mundo, principalmente en el aspecto de 
+        salud, así como en el aspecto económico, dejando a muchas personas
+        sin trabajo debido a la clausura de muchas empresas, reduciendo su
+        número de empleados.<br><br>
+        <img src="https://api.creativecommons.engineering/v1/thumbs/ddaaedc0-2af4-4649-866e-497b4e22cfd9" width="500" height="300"><br><br>
+
+        Por lo tanto, la Universidad de Sonora ha estado planteando lineamientos 
+        para considerar el regreso de las actividades presenciales cuando  el 
+        semáforo epidemiológico cambie al color verde. Las personas
+        deberan tomar conciencia y respetar los lineamientos determinados
+        por la universidad, por lo que deberán tomar en cuenta el conocimiento
+        de las consecuencias y sanciones al no respetar los lineamientos proporcionados.<br><br>
+        <img src="https://live.staticflickr.com/1217/616734901_80d1483ddd.jpg" width="500" heigth ="350"><br><br>
+        Como consecuencia de que alguna persona no cumpla con los lineamientos
+        para entrar a la universidad, tanto el alumno como los trabajadores
+        serán sancionados de la siguiente manera:<br>   
+    </p>
+    <div class="alumnos">
+        <ol><b>Alumnos</b>
+            <li>Se le presentará una amonestación por escrito de parte de la Brigada de Inspección.</li>
+            <li>Si el alumno ya ha sido amonestado y vuelve a presentarse la misma sanción,
+                éste será convocado por el Consejo Divisional. El Consejo tendrá la responsabilidad de resolver la sanción correspondiente.</li> 
+        </ol>
+    </div>
+    <img src="https://api.creativecommons.engineering/v1/thumbs/4458d065-6e7c-455a-9839-6f6bbde5d7b3" width="500" height="350"><br><br>
+    
+    <div class="empleados">
+        <ol><b>Empleados universitarios</b>
+            <li>En caso de incumplimiento, al empleado le será generado
+                un extrañamiento por escrito, por parte de la Brigada de Inspección.<br>
+            <li>En caso de volver a cometer la misma sanción, será convocado hacia la
+                Dirección de Recursos Humanos para poder resolverla mediante la investigación 
+                administrativa correspondiente.        
+            </li>
+        </ol>
+    </div>
+    <img src="https://api.creativecommons.engineering/v1/thumbs/69710d2f-9479-4b6d-b472-77e434d27429" width="500" height="350"><br><br>
+    
+
+
+</body>
+{% endblock %}

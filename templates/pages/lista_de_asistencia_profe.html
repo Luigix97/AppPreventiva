@@ -1,0 +1,36 @@
+{% extends "appWeb.html" %}
+{% load static %}
+{% block title %} Asistencia de profesores de hoy {% endblock %}
+
+{% block style %} 
+{% endblock %}
+
+{% block content %}
+{% if not objects_list %}
+    <h2>Asistencia de profesores</h2>
+    <table id="clases"  >
+        <thead>
+            <tr>
+                <th>Materia impartida</th>
+                <th>Profesor</th>
+                <th>Tipo de asistencia</th>
+                <th>Mensaje adicional</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for asist in object_list %}
+            <tr>
+                <td>{{asist.materia}}</td>
+                <td>{{asist.profesor}}</td>
+                <td>{{asist.tipo}}</td>
+                <td>{{asist.mensaje}}</td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+   
+        
+{% else %}
+    <h2>No hay asistencias registradas</h2>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,141 @@
+{% extends "appWeb.html" %}
+
+{% load static %}
+<!DOCTYPE html>
+
+<title> {% block title %} Información de Prevención {% endblock %}</title>
+
+{% block style %}
+   
+    <link rel="stylesheet" type="text/css" href="{% static 'css/InfoPrevencion.css' %}"/> 
+
+{% endblock %}
+
+{% block content %}
+
+
+    <body>
+
+        <h1 style ="text-align: center;"> Información para la prevención contra el COVID-19</h1>
+        <br>
+
+        <div class="semaforo"> 
+            <h2> El semáforo epidemiológico se encuentra en estado amarillo al día de hoy</h2>
+        </div>   
+        <br><br>
+
+        <p style = "text-align: justify;">
+            Después de algún tiempo de haber suspendido las actividades presenciales por este virus llamado COVID-19, 
+            se han originado retrasos en las funciones sustantivas y en diversos trámites que
+            necesariamente se requiere la presencia en los campus universitarios. En virtud de esta situación, las
+            autoridades universitarias hemos recibido diversas solicitudes para permitir algunas de las actividades
+            presenciales, tanto academicas como administrativas, manteniendo todas las precauciones que exigen los protocolos establecidos por
+            las autoridades sanitarias, tanto estatales como federales.
+            Por otra parte, el semáforo epidemiológico en Sonora se ha mantenido en naranja durante las últimas
+            semanas debido a la disminución de los contagios y al menor número de camas ocupadas en hospitales
+            públicos y privados. Esta situación permite ampliar en forma parcial, restringida y escalonada, el número y
+            tipo de actividades permitidas al interior de la institución. 
+            Por eso la siguiente información pretende dar consejos y recomendaciones para seguir evitando el contagio de este virus dentro y fuera de la institución.
+        </p>
+
+
+        <h2>Las medidas que se deben tomar son: </h2>
+
+        <h3>Usar mascarilla</h3>
+
+        <img src = "https://live.staticflickr.com/65535/49805687292_3090c6722b_b.jpg" width="300" height="300">
+        <br><br>
+  
+
+        <ul>
+            <li> Todas las personas de 2 años de edad o más deben usar mascarillas en público.</li>
+            <li> Las mascarillas se deben usar además de mantener una distancia de al menos 6 pies, especialmente si está con personas que no viven con usted.</li>
+            <li> Si un integrante de su hogar se infecta, el resto de los miembros de su hogar deberían tomar precauciones, como el uso de mascarillas, para evitar transmitir el virus a otras personas.</li>
+            <li> Lávese las manos o use un desinfectante de manos antes de colocarse la mascarilla.</li>
+            <li> Use la mascarilla de tal manera que le cubra la nariz y la boca, y asegúrela por debajo del mentón.</li>
+            <li> Ajuste la mascarilla contra los lados de su cara con las tiras detrás de las orejas, o ate los lazos detrás de su cabeza.</li>
+            <li> Si se tiene que acomodar la mascarilla constantemente, quiere decir que no ajusta correctamente y quizá deba buscar otro tipo o marca de mascarilla.</li>
+        </ul>
+        <br>
+
+        <h3>Mantenga distancia</h3>
+
+        <img src = "https://www.gob.mx/cms/uploads/document/main_image/80572/Mesa_de_trabajo_10-100.jpg" width="400" height="200">
+        <br><br>
+
+        
+        <ul>
+            <li>Dentro de su casa: evite el contacto cercano con las personas que están enfermas.</li>
+                -De ser posible, mantenga una distancia de 6 pies entre la persona enferma y otros miembros de su hogar.
+            <li>Fuera de su casa: mantenga una distancia de 6 pies de las personas que no viven en su hogar.</li>
+                -Recuerde que algunas personas que no tienen síntomas pueden propagar el virus.<br>
+                -Mantener distancia con los demás es especialmente importante para las personas que tienen mayor riesgo de enfermarse gravemente.
+        </ul>
+        <br>
+
+        <h3>Vacúnese</h3>
+
+        <img src = "https://live.staticflickr.com/7437/12291681146_387a74fba3_b.jpg" width="400" height="200">
+        <br><br>
+
+        <ul>
+            <li>Las vacunas autorizadas contra el COVID-19 pueden ayudar a protegerlo del COVID-19.</li>
+            <li>Debería aplicarse la vacuna contra el COVID-19 cuando esté disponible para usted.</li>
+            <li>Luego de completar la vacunación, puede reanudar algunas de las actividades que dejó de hacer por la pandemia.</li>
+        </ul>
+        <br>
+   
+        <h3>Evite las grandes aglomeraciones y los espacios mal ventilados</h3>
+
+        <img src = "https://live.staticflickr.com/50/144789392_a61f313336_b.jpg" width="400" height="200">
+        <br><br>
+    
+        <ul>
+            <li>Estar en espacios con aglomeraciones como restaurantes, bares, gimnasios o cines aumenta su riesgo de COVID-19.</li>
+            <li>En lo posible, evite los espacios cerrados donde no hay circulación de aire fresco del exterior.</li>
+            <li>Si está en interiores, abra las puertas y ventanas para que ingrese aire fresco, si es posible.</li>
+        </ul>
+        <br>
+
+        <h3>Lavarse las manos frecuentemente</h3>
+
+        <img src = "https://live.staticflickr.com/1586/23915542966_f1e0c2bd24.jpg" width="350" height="250">
+        <br><br>
+
+
+        <ul>
+
+            <li>Lávese las manos con frecuencia con agua y jabón por al menos 20 segundos, especialmente después de haber estado en un lugar público, o después de sonarse la nariz, toser o estornudar.</li>
+            <li>Es de suma importancia que se lave:</li>
+                -Antes de comer o preparar la comida. <br>
+                -Después de ir al baño. <br>
+                -Después de salir de lugares públicos. <br>
+                -Después de manipular su mascarilla. <br>
+            <li>Si no dispone de agua y jabón, use un desinfectante de manos que contenga al menos un 60 % de alcohol.</li>
+                Cubra toda la superficie de las manos y frótelas hasta que las sienta secas. <br>
+            <li>Evite tocarse los ojos, la nariz y la boca sin antes lavarse las manos.</li>
+        </ul>
+        <br>
+
+        <h3>Monitoree su salud todos los días</h3>
+
+        <img src = "https://live.staticflickr.com/65535/48862125021_11978447cc_b.jpg" width="350" height="250">
+        <br><br>
+
+        
+
+        <ul>
+
+            <li>Esté atento a los síntomas. Esté atento a la aparición de fiebre, tos, dificultad para respirar u otros síntomas del COVID-19.</li>
+            <li>Controle su temperatura si presenta síntomas.</li>
+            
+        </ul>
+        
+
+    
+        
+    </body>
+
+{% endblock %}
+
+

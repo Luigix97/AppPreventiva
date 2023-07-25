@@ -1,0 +1,30 @@
+{% extends "appWeb.html" %}
+
+{% block title %} Notificar queja {% endblock %}
+
+{% block content %}
+
+<h1 style ="text-align: center;"> <b>Notificación de quejas </b></h1> <br>
+    <p> En este apartado un alumno podrá realizar una queja de forma anonima
+        acerca del incumplimiento de los lineamientos proporcionados
+        por la Universidad de Sonora.
+    </p>
+    
+<form method="POST">
+    {% csrf_token %}
+    {{form}}
+    <button type='submit' class="botonGuardar"> Guardar</button>
+</form>
+
+{% for message in messages %}
+<div class="container-fluid p-0">
+  <div class="alert {{ message.tags }} alert-dismissible" role="alert" >
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    {{ message }}
+  </div>
+</div>
+{% endfor %}
+{% endblock %}
+

@@ -1,0 +1,44 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/barra_lateral.css' %}" />
+
+{% if user.is_authenticated %}
+<div id="barra_lat">
+    <ul>
+        {% if user.rol.id == 4 or user.is_staff%}
+        <li><a href="{% url 'lista_asistencias_profes' %}">Asistencia próxima de profesores</a></li>
+        <li><a href="{% url 'avisos' %}">Avisos importantes</a></li>
+        <li><a href="{% url 'gestiona' %}">Petición para asistir</a></li>
+        <li><a href="{% url 'ubicaciones' %}">Ubicaciones</a></li>
+        <li><a href="{% url 'notificarqueja' %}">Notificar una queja</a></li>
+        <li><a href="{% url 'notificarproductos' %}">Falta productos</a></li>
+        <li><a href="{% url 'notificarcontenedor' %}">Contenedor lleno</a></li>
+
+        {% endif %}
+
+        {% if user.rol.id == 2 %}
+        <li><a href="{% url 'seleccionar_asistencia' %}">Notificar asistencia</a></li>
+        <li><a href="{% url 'crear_aviso' %}">Hacer aviso</a></li>
+        {% endif %}
+        
+        {% if user.rol.id == 1 or user.is_staff %}
+        <li><a href="{% url 'lista_de_usuarios' %}">Lista de usuarios</a></li>
+        <li><a href="{% url 'registrar_usuario' %}">Registrar usuario nuevo</a></li>
+        <li><a href="{% url 'listarquejas' %}">Lista de quejas</a></li>
+        <li><a href="{% url 'listaproductos' %}">Faltantes de limpieza</a></li>
+        <li><a href="{% url 'listacontenedores' %}">Contenedores llenos</a></li>
+        {% endif %}
+
+    </ul>
+</div>
+{% endif %}
+
+<div id="usuario">
+    <ul>
+        {% if user.is_authenticated %}
+            <li>Usuario: {{ user.get_username }}</li>
+            <li><a href="{% url 'logout'%}?next={{request.path}}">Cerrar sesión</a></li>
+        {% else %}
+             <li><a href="{% url 'login'%}?next={{request.path}}">Iniciar sesión</a></li>
+        {% endif %}
+        </ul>
+</div>

@@ -1,0 +1,10 @@
+{% extends "appWeb.html" %}
+
+{% block title %} Sesión cerrada {% endblock %}
+
+{% block content %}
+<p>Sesión cerrada con éxito.</p>
+
+<a href="{% url 'login'%}">Has click aquí para acceder de nuevo.</a>
+
+{% endblock %}

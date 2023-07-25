@@ -1,0 +1,42 @@
+{% extends "appWeb.html" %}
+
+{% block titke%} Lista de usuarios {% endblock %}
+
+{% block content %}
+
+{% if object_list %}
+    <h2>Lista de usuarios</h2>
+
+    <table id="clases"> 
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Expediente</th>
+                <th>Correo electrónico</th>
+                <th>Opciones</th>
+            </tr>
+        </thead>
+        {% for usuario in object_list %}
+            <tr>
+                <td>{{usuario.id}}</td>
+                <td>{{usuario.username}}</td>
+                <td>{{usuario.nombres}}</td>
+                <td>{{usuario.apellidos}}</td>
+                <td>{{usuario.expediente}}</td>
+                <td>{{usuario.email}}</td>
+                <td>
+                    <a href="{% url 'eliminar_usuario' usuario.id %}">Eliminar</a>
+                    <a href="{% url 'editar_usuario' usuario.id %}">Editar</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% else %}
+    <h2>No hay usuarios registrados</h2>
+{% endif %}
+
+{% endblock %}

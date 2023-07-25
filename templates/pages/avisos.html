@@ -1,0 +1,40 @@
+{% extends "appWeb.html" %}
+{% load static %}
+{% block title %} Avisos {% endblock %}
+
+{% block style %} 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/avisos.css' %}" />
+{% endblock %}
+
+{% block content %}
+
+{% if avisos %}
+
+{% for aviso in avisos %}
+<h3><b>Aviso</b></h3>
+<table id="clases"> 
+    <thead>
+        <tr>
+            <td><b>Profesor</b></td>
+            <td><b>Aviso</b></td>
+            <td><b>Fecha del aviso</b></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{aviso.autor}}</td>
+            <td>{{aviso.aviso}}</td>
+            <td>{{aviso.fecha_pub}}</td>
+        </tr>
+    </tbody>
+</table>
+{% endfor %}
+    
+
+{% else %}
+
+<h2>No hay avisos</h2>
+
+{% endif %}
+
+{% endblock %}

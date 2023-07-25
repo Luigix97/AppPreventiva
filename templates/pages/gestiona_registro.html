@@ -1,0 +1,46 @@
+{% extends "appWeb.html" %}
+
+{%block title %} Mis Registros {% endblock %}
+
+{% block content %}
+
+<h1> Lista de Clases Registradas </h1>
+
+<table id="clases">
+    <thead>
+        <tr>
+            <td><b>Expediente</b></td>
+            <td><b>Clase</b></td>
+            <td><b>Horario</b></td>
+            <td><b>Ubicacion</b></td>
+            <td><b>Opción</b></td>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        {% if alumnos %}
+        
+        {% for alumno in alumnos %}
+
+            <tr>
+                <td>{{ alumno.expediente}}</td>
+                <td>{{ alumno.materiaAsistir.nombre }}</td>
+                <td>{{ alumno.materiaAsistir.horario }}</td>
+                <td>{{ alumno.materiaAsistir.ubicacion.nombre }}</td>
+                
+                <td> <a class="btn btn-danger" href="{% url 'eliminar' alumno.id %}">Eliminar</a> </td>
+            </tr>
+            
+        {% endfor %}
+
+        {% else %}
+        
+        <h1>No hay registro de clases</h1>
+
+        {% endif %}
+    </tbody>
+</table>
+
+
+{% endblock %}

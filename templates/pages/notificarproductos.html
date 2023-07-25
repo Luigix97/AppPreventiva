@@ -1,0 +1,33 @@
+{% extends "appWeb.html" %}
+
+{% block title %} Notificar falta de productos de sanitización {% endblock %}
+
+{% block content %}
+
+    <h1 style ="text-align: center;"><b>Notificación acerca de la falta de productos para sanitizar las aulas</b></h1>
+        <p>
+            Este apartado tiene como propósito permitir al alumno 
+            notificar acerca de la falta de productos de sanitización 
+            en algun aula, con el objetivo de informar al personal 
+            administrativo y que se puedan abastecer los suministros 
+            de una forma mas eficiente. 
+        </p>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p }}
+        <button type='submit' class="botonGuardar"> Guardar</button>
+    </form>
+    
+    {% for message in messages %}
+    <div class="container-fluid p-0">
+      <div class="alert {{ message.tags }} alert-dismissible" role="alert" >
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        {{ message }}
+      </div>
+    </div>
+    {% endfor %}
+
+{% endblock %}

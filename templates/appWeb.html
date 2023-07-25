@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %}  {% endblock %} </title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/appWeb.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/gestiona.css' %}" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    {% load bootstrap4 %}
+
+    {% bootstrap_css %}
+
+    {% block style %} {% endblock %}
+</head>
+<body id="centro">
+    {% include "navigation/barra_superior.html" %}
+    {% include "navigation/barra_lateral.html" %}
+    
+
+    <div id="centrocuerpo"> 
+        {% block content %}
+        {% endblock %}
+    </div>
+    
+</body>
+</html>

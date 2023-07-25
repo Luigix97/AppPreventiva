@@ -1,0 +1,64 @@
+{% extends "appWeb.html" %}
+
+{% block title %} Inscribirse A Una Clase {% endblock %}
+
+{% block content %}
+
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p }}
+    <button type='submit' class="botonGuardar"> Guardar</button>
+</form>
+
+<br>
+
+<table id="clases">
+    <thead>
+        <tr>
+            <td><b>Clase</b></td>
+            <td><b>Horario</b></td>
+            <td><b>Ubicacion</b></td>
+            <td><b>Cupo Disponible</b></td>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% if clases %}
+        
+        {% for clase in clases %}
+            <tr>
+                <td>{{ clase.nombre }}</td>
+                <td>{{ clase.horario }}</td>
+                <td>{{ clase.ubicacion.nombre }}</td>
+                <td>{{ clase.cupoDisponible }}</td>
+            </tr>
+            
+        {% endfor %}
+
+        {% else %}
+        
+        <h1>No hay registro de clases</h1>
+
+        {% endif %}
+    </tbody>
+</table>
+
+<br>
+
+<a class="botonRegistro" href="{% url 'gestiona_registro' %}">Mis Registros</a>
+
+<br><br>
+
+{% for message in messages %}
+<div class="container-fluid p-0">
+  <div class="alert {{ message.tags }} alert-dismissible" role="alert" >
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    {{ message }}
+  </div>
+</div>
+{% endfor %}
+
+
+{% endblock %}

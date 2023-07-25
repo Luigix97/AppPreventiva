@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.alumnos{
+    width: 1000px;
+    height: 100px;
+    outline: 2px solid black;
+}
+
+
+.empleados{
+    width: 1000px;
+    height: 100px;
+    outline: 2px solid black;
+}
+
+
+

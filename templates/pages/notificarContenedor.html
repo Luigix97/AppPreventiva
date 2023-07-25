@@ -1,0 +1,32 @@
+{% extends "appWeb.html" %}
+
+{% block title %} Notificar acerca de los contenedores de desechos {% endblock %}
+
+{% block content %}
+
+<h1 style ="text-align: center;"><b>Notificar acerca de los contenedores de desechos</b></h1>
+    <p>
+        En este apartado el alumno puede notificar sobre los contenedores
+        de desechos que hay en las aulas con el objetivo de que, si se
+        notifica un contenedor lleno se le haga saber al personal administrativo
+        y de esta manera poder mandar una orden para vaciar dichos contenedores y
+        que se encuentren disponibles nuevamente.
+    </p>
+
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p }}
+    <button type='submit' class="botonGuardar"> Guardar</button>
+</form>
+
+{% for message in messages %}
+<div class="container-fluid p-0">
+  <div class="alert {{ message.tags }} alert-dismissible" role="alert" >
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    {{ message }}
+  </div>
+</div>
+{% endfor %}
+{% endblock %}

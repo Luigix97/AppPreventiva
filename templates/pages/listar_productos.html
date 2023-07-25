@@ -1,0 +1,34 @@
+{% extends "appWeb.html" %}
+
+{% block title %} Faltas de producto {% endblock %}
+
+{% block content %}
+
+{% if faltas %}
+    
+<h1 style ="text-align: center;"><b>Faltas de producto</b></h1>
+
+<table id="clases"> 
+    <thead>
+        <tr>
+            <td><b>N°</b></td>
+            <td><b>Aula donde hace falta productos</b></td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for falta in faltas %}
+            <tr>
+                <td>{{falta.id}}</td>
+                <td>{{falta.Aula}}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+</table>
+       
+{% else %}
+
+<h2>No hacen falta productos</h2>
+
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+.cajon {
+    background-color: rgb(101, 202, 206);
+    border-radius: 15px;
+    margin: 10px 10px;
+}
+
+.dentro {
+    margin: 10px 10px;
+}
+
+.aviso {
+    background-color: rgba(247, 247, 247, 0.842);
+    margin: 10px 10px;
+}

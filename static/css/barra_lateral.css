@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+#barra_lat a:link{
+    color: white;
+    text-decoration: none;
+}
+
+#barra_lat a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+#barra_lat a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+#barra_lat  {
+    background-color: rgb(20, 219, 209);
+    color: white;
+    padding: 1px;
+}
+
+#barra_lat li {
+    color: white;
+    list-style: none;
+    display: inline;
+    font-size: 22px;
+    margin: 0px 10px;
+}
+
+#usuario a:link{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+#usuario a:visited{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+#usuario a:hover{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}

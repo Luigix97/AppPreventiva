@@ -1,0 +1,16 @@
+{% extends "appWeb.html" %}
+
+{% block titke %} Registro de usuarios {% endblock %}
+
+{% block content %}
+
+    <h2>Registro de usuarios</h2>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <a href="{% url 'lista_de_usuarios' %}">Cancelar</a>
+        <button type="submit">Registrar</button>
+    </form>
+
+{% endblock %}

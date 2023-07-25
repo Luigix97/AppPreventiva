@@ -1,0 +1,12 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/barra_superior.css' %}" />
+
+<div id="barra_sup">
+    <ul>
+            <!-- <li><img src="{% static 'images/logo.png' %}" width="80" alt="Logotipo de UNISON"></li> -->
+            <li><a href="https://www.unison.mx">UNISON</a> </li>
+            <li><a href="{% url 'InfoPrevencion' %}"> Información de prevención</a></li>
+            <li><a href="{% url 'sanciones' %}"> Información sobre sanciones </a></li>
+        </div>
+    </ul>
+</div>  

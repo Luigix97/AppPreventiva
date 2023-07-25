@@ -1,0 +1,42 @@
+{% extends "appWeb.html" %}
+
+{%block title %} Ubicaciones {% endblock %}
+
+{% block content %}
+
+<h1> Lista de Ubicaciones </h1>
+
+<table id="clases">
+    <thead>
+        <tr>
+            <td><b>Ubicación</b></td>
+            <td><b>Aforo Actual</b></td>
+            <td><b>Aforo Máximo</b></td>
+            <td><b>Porcentaje %</b></td>
+        </tr>
+    </thead>
+
+        {% if Ubicaciones %}
+        
+        {% for ubicacion in Ubicaciones %}
+
+            <tr>
+                <td>{{ ubicacion.nombre}}</td>
+                <td>{{ ubicacion.capacidadActual }}</td>
+                <td>{{ ubicacion.capacidadMaxima }}</td>
+                <td>{{ ubicacion.aforo}} </td>
+
+            </tr>
+            
+        {% endfor %}
+
+        {% else %}
+        
+        <h1>No hay registro de Ubicaciones</h1>
+
+        {% endif %}
+    </tbody>
+</table>
+
+
+{% endblock %}

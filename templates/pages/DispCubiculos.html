@@ -1,0 +1,18 @@
+{% extends "appWeb.html" %}
+
+{% block title %} Disponibilidad de Cubículos {% endblock %} 
+
+{% block content %}
+
+ <h1 style ="text-align: center;"> Disponibilidad de Cubículos</h1>    
+
+
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p }}
+    </form>
+
+
+{% endblock %}
+        
+        

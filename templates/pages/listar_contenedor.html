@@ -1,0 +1,34 @@
+{% extends "appWeb.html" %}
+
+{% block title %} Lista de contenedores llenos {% endblock %}
+
+{% block content %}
+
+{% if llenos %}
+    
+<h1 style ="text-align: center;"><b>Contenedores llenos</b></h1>
+
+<table id="clases"> 
+    <thead>
+        <tr>
+            <td><b>N°</b></td>
+            <td><b>Aula donde está lleno el contenedor</b></td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for lleno in llenos %}
+            <tr>
+                <td>{{lleno.id}}</td>
+                <td>{{lleno.Aula}}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+</table>
+    
+{% else %}
+
+<h2>No se encontraron contenedores llenos</h2>
+
+{% endif %}
+
+{% endblock %}

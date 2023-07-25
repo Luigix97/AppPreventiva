@@ -1,0 +1,47 @@
+{% extends "appWeb.html" %}
+
+{% block title %} Lista de Quejas {% endblock %}
+
+{% block content %}
+
+{% if quejas %}
+    
+<h1 style ="text-align: center;"><b>Lista de quejas registradas</b></h1>
+
+<table id="clases"> 
+    <thead>
+        <tr>
+            <td><b>N°</b></td>
+            <td><b>Queja</b></td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for queja in quejas %}
+            <tr>
+                <td>{{queja.id}}</td>
+                <td>{{queja.Queja}}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+</table>
+    
+    
+
+{% else %}
+
+<h2>No se encontraron quejas realizadas</h2>
+
+{% endif %}
+
+{% for message in messages %}
+    <div class="container-fluid p-0">
+        <div class="alert {{ message.tags }} alert-dismissible" role="alert" >
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            {{ message }}
+        </div>
+    </div>
+{% endfor %}
+
+{% endblock %}
